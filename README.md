@@ -1,36 +1,35 @@
-# Laravel 12 開発環境 (PHP 8.3 & MariaDB) for GitHub Codespaces
+# Ambiente de desenvolvimento Laravel 12 (PHP 8.3 e MariaDB) para GitHub Codespaces
 
-このリポジトリは、**GitHub Codespaces** で **PHP 8.3** をベースにした **Laravel 12** の開発環境を簡単に構築できるようにするための設定を提供します。  
-**MariaDB** を使用し、Docker を活用した開発環境を即座にセットアップできます。
-
----
-
-## 🚀 GitHub Codespaces でのセットアップ手順
-
-### 1️⃣ Codespaces を起動
-
-1. GitHub の **このリポジトリ** を開く  
-2. `<> Code` ボタンをクリック  
-3. `Codespaces` タブから `Create Codespace on main` を選択  
-
-Codespaces のセットアップが完了すると、開発環境が自動的に構築されます。
+Este repositório fornece uma configuração para facilitar a configuração de um ambiente de desenvolvimento Laravel 12 baseado no PHP 8.3 no GitHub Codespaces . Você pode configurar rapidamente um ambiente de desenvolvimento usando MariaDB e Docker.
 
 ---
 
-### 2️⃣ Laravel 12 の環境構築
+## 🚀 Instruções de configuração para GitHub Codespaces
 
-Codespaces が起動したら、ターミナルで以下のコマンドを順番に実行します。
+### 1️⃣ Lançar Codespaces
 
-#### 🔹 2-1. Laravel プロジェクトの作成
+1. Abra este repositório no GitHub
+2. <> CodeClique no botão
+3. CodespacesCreate Codespace on mainSelecione na aba
+
+Depois de configurar o Codespaces, seu ambiente de desenvolvimento será criado automaticamente.
+
+---
+
+### 2️⃣ Configurando o Laravel 12
+
+Depois que o Codespaces estiver em execução, execute os seguintes comandos no terminal em ordem:
+
+#### 🔹 2-1. Criar um projeto Laravel
 
 ```bash
 composer create-project laravel/laravel:^12 laravel-app
 cd laravel-app
 ```
 
-#### 🔹 2-2. 環境設定 (.env ファイルの更新)
+#### 🔹 2-2. Configurações do ambiente (atualizar arquivo .env)
 
-`.env` ファイルを編集し、MariaDB の接続情報を更新します。
+`.env` Edite o arquivo e atualize as informações de conexão do MariaDB.
 
 ```dotenv
 DB_CONNECTION=mysql
@@ -41,50 +40,49 @@ DB_USERNAME=laravel
 DB_PASSWORD=secret
 ```
 
-#### 🔹 2-3. アプリケーションキーの生成
+#### 🔹 2-3. Gerar uma chave de aplicação
 
 ```bash
 php artisan key:generate
 ```
 
-#### 🔹 2-4. データベースマイグレーション
+#### 🔹 2-4. Migração de banco de dados
 
 ```bash
 php artisan migrate
 ```
 
-#### 🔹 2-5. サーバーの起動
+#### 🔹 2-5. Iniciando o servidor
 
 ```bash
 php artisan serve --host=0.0.0.0 --port=8080
 ```
 
-ポップアップが出てくるのでブラウザで開くを押して、別タブを開いてください。
+Um pop-up aparecerá, então clique em "Abrir no navegador" para abrir uma nova aba.
 
 ---
 
-## 🛠 MariaDB コマンドラインツールの利用
+## 🛠 Usando as ferramentas de linha de comando do MariaDB
 
-MariaDB クライアントがインストールされているため、以下のコマンドで MariaDB に接続できます。
+Agora que você tem o cliente MariaDB instalado, você pode se conectar ao MariaDB com o seguinte comando:
 
 ```bash
 mysql -h mariadb -uroot -p
 ```
 
-パスワードの入力を求められたら、`.env` に設定したパスワード（例: `secret`）を入力してください。
+Quando for solicitado que você insira uma senha, insira `.env` a senha que você definiu (por exemplo:`secret`)
 
 ---
 
-## 🔍 Codespaces 用の追加情報
+## 🔍 Informações adicionais para Codespaces
 
-### ✅ `.devcontainer` 設定
+### ✅ Configurações .devcontainer
 
-このリポジトリには **GitHub Codespaces 用の `.devcontainer` 設定** が含まれています。  
-これにより、Codespaces を起動すると **自動で開発環境が構築される** 仕組みになっています。
+Este repositório contém a configuração para GitHub Codespaces `.devcontainer`. Isso significa que quando você inicia o Codespaces, um ambiente de desenvolvimento é criado automaticamente.
 
-### ✅ Git の利用
+### ✅ Usando Git
 
-Codespaces には Git がインストールされているため、通常の Git コマンドが利用可能です。
+O Codespaces vem com o Git instalado, então os comandos usuais do Git estão disponíveis.
 
 ```bash
 git add .
