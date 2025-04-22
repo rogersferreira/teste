@@ -9,8 +9,8 @@ Este repositório fornece uma configuração para facilitar a configuração de 
 ### 1️⃣ Lançar Codespaces
 
 1. Abra este repositório no GitHub
-2. `<> Code` Clique no botão
-3. CodespacesCreate Codespace on mainSelecione na aba
+2. Clique no botão `<> Code`
+3. Selecione na aba `Codespaces` Create Codespace on main
 
 Depois de configurar o Codespaces, seu ambiente de desenvolvimento será criado automaticamente.
 
