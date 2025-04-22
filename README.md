@@ -1,4 +1,4 @@
-# Ambiente de desenvolvimento Laravel 12 (PHP 8.3 e MariaDB) para GitHub Codespaces
+# Ambiente modelo de desenvolvimento Laravel 12 (PHP 8.3 e MariaDB) para GitHub Codespaces
 
 Este repositório fornece uma configuração para facilitar a configuração de um ambiente de desenvolvimento Laravel 12 baseado no PHP 8.3 no GitHub Codespaces . Você pode configurar rapidamente um ambiente de desenvolvimento usando MariaDB e Docker.
 
